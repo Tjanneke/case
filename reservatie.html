@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservatie.css">
+    <script src="https://kit.fontawesome.com/41e6195b33.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7bb4e3809a98e69a9f08144ef/3a991d04a218d52280e960f72.js");</script>
+    <meta name="title" content="Le Mirage | 100 Jaar Culinaire Perfectie in Brussel">
+    <meta name="description" content="Le Mirage, opgericht in 1924, is een iconisch restaurant in Brussel met twee Michelinsterren. Geniet van verfijnde Belgische gerechten en een rijke geschiedenis, bezocht door Winston Churchill, Queen Elizabeth II, en Grace Kelly.">
+    <meta name="keywords" content="Le Mirage, Brussels restaurant, Michelinster, haute cuisine, Belgisch keuken, Winston Churchill, Queen Elizabeth II, Grace Kelly, luxueus dineren, culinaire ervaring, historisch restaurant, Le Mirage cookie policy, cookie policy">
+<meta name="author" content="Le Mirage">
+    <title>Reservatie</title>
+</head>
+<body>
+    <header>
+        <div class="header-elements">
+            <div class="nav-left">
+            </div>
+            <div class="nav-mid">
+                <nav>        
+                    <a href="index.html" class="links">Home</a>
+                    <a href="overons.html" class="links">Over ons</a>
+                </nav>
+                <a href="index.html">
+                    <img src="reservatieImages/lemirage-dark.png" class="logo" alt="Logo"></a>
+                <nav>
+                    <a href="menu.html" class="links">Menu</a>
+                    <a href="reservatie.html" class="links">Reserveer</a>
+                </nav> 
+            </div>      
+            <div class="nav-right">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>  
+    </header>
+        <div class="container">
+            <div class="absolute" id="absolute">
+                <div class="star_container">
+                    <img src="./reservatieImages/MichelinStar 2.svg" class="star">
+                    <img src="./reservatieImages/MichelinStar 2.svg" class="star">
+                </div>
+                <div class="tekst_container">
+                    <h1 class="reservation_title tekst_center">Maak uw reservatie</h1>
+                    <div class="tekst_center">
+                        <p class="smallTekst">Hieronder kunt u via twee verschillende systemen reserveren:</p>
+                        <p class="smallTekst">1. - Voor reservaties van een lunch of diner tot en met 28/02/2025</p> 
+                        <p class="smallTekst">2. - Voor reservaties van een evenement vanaf 01/03/2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="reservation_left">
+                    <div class="img1_div" id="divBoek">
+                        <h2 class="center">Boek een tafel</h2>
+                    </div>
+                    <div class="none" id="formShow">
+                        <form id="form">
+                            <div class="form">
+                            <input class="input_style" type="text" id="nameBoek" name="nameBoek" placeholder="*Naam"><br>
+                            <span class="error" id="nameBoek_error"></span><br>
+                            <input class="input_style" type="tel" id="telBoek" name="telBoek" placeholder="*+32 471995491"><br>
+                            <span class="error" id="telBoek_error"></span><br>
+                            <input class="input_style" type="email" id="emailBoek" name="emailBoek" placeholder="*Email"><br>
+                            <span class="error" id="emailBoek_error"></span><br>
+                            <input name="date" id="date" type="text" class="input_style" placeholder="*DD/MM/YYYY"><br>
+                            <span class="error" id="date_error"></span><br>
+                            <select name="time" id="time" class="input_style_select">
+                                <option>*Kies een tijd</option>
+                                <option>12:00</option>
+                                <option>12:30</option>
+                                <option>13:00</option>
+                                <option>13:30</option>
+                                <option>14:00</option>
+                                <option>18:30</option>
+                                <option>19:00</option>
+                                <option>19:30</option>
+                                <option>20:00</option>
+                                <option>20:30</option>
+                                <option>21:00</option>
+                                <option>21:30</option>
+                                <option>22:00</option>
+                            </select><br>
+                            <span class="error" id="time_error"></span>
+                            <br>
+                            <select name="gasten" id="gasten" class="input_style_select">
+                                <option>*Hoeveel gasten</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select><br>
+                            <span class="error" id="gasten_error"></span>
+                            <br>
+                            <input class="akkoord" type="checkbox" id="accept" name="accept">
+                            <label for="accept" class="akkoord">Ga akkoord met de algemene voorwaarden.</label><br>
+                            <span class="error" id="accept_error"></span><br>
+                            <input class="input_style_button" onclick="verstuurBoeken()" type="button" value="Reserveer">
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+                <div class="reservation_right">
+                    <div class="img2_div" id="divRes">
+                        <h2 class="center">Evenementen</h2>
+                    </div>
+                    <div id="formShow2" class="none">
+                        <form>
+                            <div class="form">
+                            <input class="input_style" type="text" id="name" name="name" placeholder="*Naam"><br>
+                            <span class="error" id="name_error"></span><br>
+                            <input class="input_style" type="email" id="email" name="email" placeholder="*Email"><br>
+                            <span class="error" id="email_error"></span><br>
+                            <input class="input_style" type="tel" id="tel" name="tel" placeholder="*+32 471995491"><br>
+                            <span class="error" id="tel_error"></span><br>
+                            <select name="dateRes" id="dateRes" class="input_style_select">
+                                <option>*Kies een datum</option>
+                                <option>14/12/2024</option>
+                                <option>20/12/2024</option>
+                                <option>21/12/2024</option>
+                                <option>27/12/2024</option>
+                                <option>28/12/2024</option>
+                            </select><br>
+                            <span class="error" id="dateRes_error"></span><br>
+                            <select name="timeRes" id="timeRes" class="input_style_select">
+                                <option>*Kies een tijd</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>14:00</option>
+                                <option>18:30</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                                <option>21:00</option>
+                                <option>22:00</option>
+                            </select><br>
+                            <span class="error" id="timeRes_error"></span><br>
+                            <select name="timeDuurRes" id="timeDuurRes" class="input_style_select">
+                                <option>*Hoeveel uur</option>
+                                <option>1u</option>
+                                <option>2u</option>
+                                <option>3u</option>
+                                <option>4u</option>
+                                <option>5u</option>
+                            </select><br>
+                            <span class="error" id="timeDuurRes_error"></span><br>
+                            <select name="gastenRes" id="gastenRes" class="input_style_select">
+                                <option>*Hoeveel gasten</option>
+                                <option>4</option>
+                                <option>6</option>
+                                <option>8</option>
+                                <option>12</option>
+                                <option>16</option>
+                            </select> <br>
+                            <span class="error" id="gastenRes_error"></span><br>
+                            <select name="type" id="type" class="input_style_select">
+                                <option>*Type feest</option>
+                                <option>Verjaardag</option>
+                                <option>Huwlijksfeest</option>
+                                <option>Receptie</option>
+                                <option>Bedrijfsfeest</option>
+                            </select> <br>
+                            <span class="error" id="type_error"></span><br>
+                            <input class="akkoord" type="checkbox" id="acceptRes" name="acceptRes">
+                            <label for="acceptRes" class="akkoord">Ga akkoord met de algemene voorwaarden.</label><br>
+                            <span class="error" id="acceptRes_error"></span><br>
+                            <input class="input_style_button" type="button" value="Reserveer" onclick="verstuurEvent()">
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+            <div class="betaalBox" id="box">
+                <div class="box_style form">
+                    <i class="fa-regular fa-circle-xmark right" onclick="hide()"></i>
+                    <h1>Jouw gegevens, <span id="nameUser"></span></h1>
+                    <hr>
+                    <div class="midden">
+                        <div class="betaalFlex">
+                            <i class="fa fa-regular fa-envelope"></i>
+                            <p id="emailKlant" class="bold"></p>
+                        </div>
+                       <div class="betaalFlex">
+                            <i class="fa fa-solid fa-mobile"></i>
+                            <p id="nummerKlant" class="bold"></p>
+                       </div>
+                       <div class="betaalFlex">
+                            <i class="fa fa-regular fa-calendar"></i>
+                            <p id="datumKlant" class="bold"></p>
+                       </div>
+                        <div class="betaalFlex">
+                            <i class="fa fa-regular fa-clock"></i>
+                            <p id="tijdKlant" class="bold"></p>
+                        </div>
+                        <div class="betaalFlex">
+                            <i class="fa fa-solid fa-people-group"></i>
+                            <p id="personenKlant" class="bold"></p>
+                        </div>
+                    </div>
+                    <h1>Betaal gegevens</h1>
+                    <hr>
+                    <h5>We vragen een voorschot van €50.</h5>
+                    <form>
+                        <input class="input_style" type="text" id="nummer" name="nummer" placeholder="*IBAN nummer"><br>
+                        <span class="error" id="nummer_error"></span><br>
+                        <input type="button" class="input_style_button_pay" value="Betaal" id="betaal" onclick=controleerRekeningNummer()>
+                    </form> 
+                </div>
+            </div>
+        </div>      
+        <footer class="footer-main">
+            <div class="footer-top">
+                <div class="footer-top-top">
+                    <div class="footer-top-left">
+                        <h2>Openingstijden</h2>
+                        <div class="opening-hours">
+                            <div>Vrijdag</div>
+                            <div>12:00 - 14:00 (Lunch)</div>
+                            <div></div>
+                            <div>18:30 - 22:00 (Diner)</div>
+                            <div>Zaterdag</div>
+                            <div>12:00 - 14:00 (Lunch)</div>
+                            <div></div>
+                            <div>18:30 - 22:00 (Diner)</div>
+                            <div>Zondag</div>
+                            <div>12:00 - 14:00 (Lunch)</div>
+                            <div></div>
+                            <div>18:30 - 22:00 (Diner)</div>
+                        </div>
+                    </div>
+                    <div class="footer-top-right">
+                        <img src="reservatieImages/lemirage-white.png" alt="Le Mirage logo" class="footer-logo">
+                        <address>
+                            Rue de l'Excellence, 47<br>
+                            1000 Brussel, België<br>
+                            <a href="tel:+3221234567">+32 2 123 45 67</a>
+                        </address>
+                        <div class="socials">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                        </div>
+                                <div class="footer-button">       
+                    <a href="reservatie.html" class="reservation-button">Reserveren</a>
+                </div>
+                    </div>
+                </div>
+          
+            </div>    
+            <div class="footer-bottom">
+                <p>2024 <i class='bx bx-copyright'></i> CVO DE VERDIEPING Janne Villak, Arda Cansizoglu, Warre Heeren</p>
+                <div class="policies">
+                    <a href="agvw.html">Algemene gebruiksvoorwaarden</a>
+                    <a href="cookies.html">Cookie policy</a>
+                </div>  
+            </div>
+          </footer>
+    <script src="reservatie.js"></script>
+</body>
+</html>

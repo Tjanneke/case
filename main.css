@@ -1,0 +1,623 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFDF6;
+  font-family: "Raleway", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #0A2B22;
+  font-family: "Cinzel", helvetica, sans-serif;
+  font-weight: 400;
+}
+
+p,
+ol,
+ul,
+li {
+  color: #364f48;
+  font-family: "Raleway", helvetica, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border-radius: 5px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFDF6;
+  z-index: 5;
+}
+
+.header-elements {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.nav-mid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links {
+  font-family: "Cinzel", Helvetica, sans-serif;
+  color: #0A2B22;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 10px;
+  position: relative;
+}
+
+.links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #BD8E34;
+  transition: width 0.9s ease, left 0.9s ease;
+}
+
+.links:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.links:hover {
+  color: #BD8E34;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.bx {
+  color: #0A2B22;
+}
+
+section {
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+  background-color: #FFFDF6;
+}
+
+section h1 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.user-policy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 100px;
+  padding: 0 20px;
+}
+
+.user-policy address {
+  color: #0A2B22;
+}
+
+.user-policy h1::after,
+.user-policy h2::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color: #bd8d3400;
+  margin: 10px auto 0;
+
+}
+
+section h1::after,
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #BD8E34;
+  margin: 15px auto 0;
+}
+
+.first-main,
+.third-main,
+.fourth-main,
+.menu-first {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section.first {
+  position: relative;
+  z-index: 0;
+}
+
+.hero-image {
+  margin-top: 100px;
+  background-image: url("images/hero-food.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 1200px;
+  border-radius: 5px;
+  position: relative;
+  opacity: .75;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.white-button {
+  color: #0A2B22;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Raleway", helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #BD8E34;
+  width: 210px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #FFFDF6;
+  transition: all 0.8s ease;
+}
+
+.white-button:hover {
+  box-shadow: 0 0 5px 0 #BD8E34;
+  border: 1px solid #BD8E34;
+}
+
+.second-main,
+.sixth-main,
+.big-fat-main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+
+.second-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.second-right span {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.third-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 60px;
+}
+
+.third-left,
+.sixth-left {
+  text-align: center;
+}
+
+.fourth-bottom {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fourth-bottom-quotes {
+  position: relative;
+  height: 300px;
+}
+
+.fourth-bottom blockquote {
+  position: absolute;
+}
+
+.fourth-bottom blockquote:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.fourth-bottom blockquote:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fourth-bottom blockquote:nth-child(3) {
+  bottom: 0;
+  right: 0;
+}
+
+.seventh-text {
+  text-align: center;
+}
+
+.eighth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-main {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+}
+
+.gallery-scroll {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.gallery-piece {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.gallery-buttons i {
+  background-color: #364f48b7;
+  color: #FFD700;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.6s ease;
+}
+
+.gallery-buttons i:hover {
+  background-color: #364f48;
+  color: #FFD700;
+  box-shadow: 0 0 5px 0 #BD8E34;
+  border: 1px solid #BD8E34;
+}
+
+footer {
+  width: auto;
+  padding: 50px;
+  background-color: #0A2B22;
+  color: #FFFDF6;
+}
+
+footer h2,
+footer h3,
+footer p {
+  color: #FFFDF6;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-top-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.footer-top-left h3 {
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.opening-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+  font-family: "Raleway", Helvetica, sans-serif;
+  color: #FFFDF6;
+}
+
+.opening-hours>div:nth-child(odd) {
+  text-align: center;
+  font-weight: 500;
+}
+
+.opening-hours>div:nth-child(even) {
+  text-align: right;
+}
+
+.footer-top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  color: #FFFDF6;
+}
+
+address {
+  text-align: center;
+  font-style: normal;
+  line-height: 1.8;
+  color: #FFFDF6;
+}
+
+.footer-top-right a {
+  color: #FFFDF6;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials i {
+  color: #FFFDF6;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.footer-top-right .reservation-button {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #BD8E34;
+  color: #0A2B22;
+  background-color: #FFFDF6;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: box-shadow 0.8s ease;
+}
+
+.reservation-button:hover {
+  box-shadow: 0 0 8px 0 #BD8E34;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.footer-bottom a,
+.footer-bottom i {
+  text-decoration: none;
+  color: #FFFDF6;
+}
+
+.policies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-right: 2rem;
+}
+
+.policies a:hover {
+  text-decoration: underline;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin: 40px;
+}
+
+.menu-buttons button {
+  width: 210px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #0A2B22;
+  color: #FFFDF6;
+  border: 1px solid #BD8E34;
+  border-radius: 5px;
+  transition: all 0.8s ease;
+  text-align: center;
+  font-family: "Raleway", helvetica, sans-serif;
+}
+
+.menu-buttons button:hover {
+  box-shadow: 0 0 5px 0 #BD8E34;
+  color: #0A2B22;
+  background-color: #FFFDF6;
+  border: 1px solid #BD8E34;
+}
+
+.modal {
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFDF6;
+  padding: 20px;
+  box-shadow: 0 5px 8px #bd8d3444;
+  z-index: 1000;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+}
+
+.modal h2 {
+  margin: 0 0 10px;
+}
+
+.modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal ul li {
+  font-family: "Raleway", Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.dish-name {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.description {
+  font-family: "Raleway", Helvetica, sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.modal button {
+  color: #0A2B22;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Raleway", helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #BD8E34;
+  width: 210px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #FFFDF6;
+  transition: box-shadow 0.8s ease;
+}
+
+.modal button:hover {
+  box-shadow: 0 0 5px 0 #BD8E34;
+  background-color: #FFFDF6;
+  border: 1px solid #BD8E34;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menu-first h1,
+.menu-first h2,
+.menu-second h1,
+.menu-second h2 {
+  text-align: center;
+}
+
+.menu-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  width: auto;
+}
+
+.menu-left-main,
+.menu-price p,
+.menu-courses,
+.menu-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu-left-main.the-end {
+  font-family: "Cinzel", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.menu-courses li {
+  font-weight: 600;
+}

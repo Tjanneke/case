@@ -1,0 +1,546 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFDF6;
+  font-family: "Raleway", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #0A2B22;
+  font-family: "Cinzel", helvetica, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  color: #364f48;
+  font-family: "Raleway", helvetica, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border-radius: 5px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFDF6;
+  z-index: 5;
+}
+
+.header-elements {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-mid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links {
+  font-family: "Cinzel", Helvetica, sans-serif;
+  color: #0A2B22;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 10px;
+  position: relative;
+}
+
+.links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #BD8E34;
+  transition: width 0.9s ease, left 0.9s ease;
+}
+
+.links:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.links:hover {
+  color: #BD8E34;
+}
+
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.bx {
+  color: #0A2B22;
+}
+
+
+/* .........ARDA  css............ */
+
+.overons .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.overons .hero img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #BD8E34;
+  border-radius: 0 0 5px 5px;
+}
+
+.overons .hero h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.overons .hero p {
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+.overons h1,
+.overons h2 {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+.overons .hero h1 {
+  position: relative;
+  transform: none;
+  left: auto;
+  top: auto;
+  margin-top: 20px;
+}
+
+/******* TIMELINE CSS START ************/
+/***************************************/
+.timeline-section {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+.timeline-section h2 {
+  color: #0A2B22;
+  font-family: "Cinzel", helvetica, sans-serif;
+  font-weight: 400;
+  display: center;
+}
+
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .timeline-content h3 {
+    position: static;
+    background-color: transparent;
+    color: #0A2B22;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-item {
+    justify-content: center;
+  }
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  padding: 40px;
+  position: relative;
+
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-content,
+p.jaar-content-p {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.timeline-content,
+.timeline-image {
+  width: 100%;
+  max-width: 350px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+.timeline-image {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.timeline-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.timeline-image :hover {
+  transform: scale(1.8);
+}
+
+.timeline-line {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  width: 100%;
+  background-color: #0A2B22;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.timeline-item p.year {
+  position: absolute;
+  top: -20px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.jaar-content {
+  display: none;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #BD8E34;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.jaar-content h3 {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.jaar-content p {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.timeline-item:nth-child(odd) {
+  margin-left: auto;
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.timeline-item:nth-child(even) {
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+
+/* Timeline Animations */
+/* Scroll Animation CSS- */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline-item:nth-child(odd) {
+  animation: slideInFromLeft 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.timeline-item:nth-child(even) {
+  animation: slideInFromRight 1s forwards;
+  animation-delay: 1s;
+}
+
+/******* TIMELINE CSS END ************/
+/***************************************/
+
+
+/******* SCROLL TO TOP START************/
+/*********************************/
+/* Scroll to Top Button Styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0A2B22;
+  color: #FFFDF6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  border: 2px solid #BD8E34;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+}
+
+.scroll-to-top:hover {
+  background-color: #364f48;
+}
+
+.scroll-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFFDF6;
+}
+
+/******* SCROLL TO TOP END************/
+/*********************************/
+
+
+
+/* FOOTER IS BEGIN HIER!! */
+footer {
+  width: auto;
+  padding: 50px;
+  background-color: #0A2B22;
+  color: #FFFDF6;
+}
+
+footer h2,
+footer h3,
+footer p {
+  color: #FFFDF6;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-top-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.footer-top-left h3 {
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.opening-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+  font-family: "Raleway", Helvetica, sans-serif;
+  color: #FFFDF6;
+}
+
+.opening-hours>div:nth-child(odd) {
+  text-align: center;
+  font-weight: 500;
+}
+
+.opening-hours>div:nth-child(even) {
+  text-align: right;
+}
+
+.footer-top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  color: #FFFDF6;
+}
+
+address {
+  text-align: center;
+  font-style: normal;
+  line-height: 1.8;
+  color: #FFFDF6;
+}
+
+.footer-top-right a {
+  color: #FFFDF6;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials i {
+  color: #FFFDF6;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.footer-top-right .reservation-button {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #BD8E34;
+  color: #0A2B22;
+  background-color: #FFFDF6;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: box-shadow 0.8s ease;
+}
+
+.reservation-button:hover {
+  box-shadow: 0 0 8px 0 #BD8E34;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.footer-bottom a,
+.footer-bottom i {
+  text-decoration: none;
+  color: #FFFDF6;
+}
+
+.policies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-right: 2rem;
+}
+
+.policies a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,475 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFDF6;
+  font-family: "Raleway", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", Helvetica, sans-serif;
+  color: #0A2B22;
+  font-weight: 400;
+}
+
+.reservation_main {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.absolute {
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  position: absolute;
+  left: -100%;
+  width: 80%;
+  background-color: #0A2B22;
+  padding: 20px;
+  margin-bottom: 4rem;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  transition: left 1s ease-in-out;
+}
+
+.absolute.active {
+  left: 0;
+}
+
+.star {
+  margin-right: 0.5rem;
+  height: 3vh;
+  width: 3vh;
+}
+
+
+.reservation_title {
+  text-align: center;
+  color: #FFFDF6;
+}
+
+.tekst_center {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.smallTekst {
+  color: #FFFDF6;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.flex {
+  display: flex;
+  padding-top: 420px;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.reservation_left {
+  margin-right: 5rem;
+}
+
+.img1_div {
+  background-image: url(./reservatieImages/HAUT_©_kris_vlegels_010-1536x836.webp);
+  height: 35vh;
+  width: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.img2_div {
+  background-image: url(./reservatieImages/HAUT_©_kris_vlegels_003-1536x836.webp);
+  height: 35vh;
+  width: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+  color: #0A2B22;
+  font-weight: 500;
+}
+
+.form {
+  width: 100%;
+  background-color: #0A2B22;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.input_style {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 600;
+  width: 75%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #0A2B22;
+  background-color: #FFFDF6;
+  margin-top: 1.2rem;
+}
+
+.input_style_select {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: #FFFDF6;
+  width: 80%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #0A2B22;
+  margin-top: 1.2rem;
+}
+
+.input_style_button {
+  color: #0A2B22;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Raleway", helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #BD8E34;
+  width: 210px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #FFFDF6;
+}
+
+.input_style_button:hover {
+  transition: all 0.8s ease;
+  color: #FFFDF6;
+  background-color: #BD8E34;
+  cursor: pointer;
+  border: 1px solid #BD8E34;
+  transition: all 0.8s ease;
+}
+
+.akkoord {
+  color: #FFFDF6;
+  text-align: left;
+  margin-top: 1.2rem;
+}
+
+.error {
+  color: red;
+  text-align: left !important;
+}
+
+#formShow {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.75s ease-out;
+}
+
+#formShow.visible {
+  max-height: 100vh;
+  transition: max-height 0.75s ease-in;
+}
+
+#formShow2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.75s ease-out;
+}
+
+#formShow2.visible {
+  max-height: 100vh;
+  transition: max-height 0.75s ease-in;
+}
+
+.betaalBox {
+  z-index: 100;
+  inset: 0px;
+  position: fixed;
+  display: none;
+  background-color: rgb(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.box_style {
+  width: 30%;
+  background-color: #FFFDF6;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.betaalFlex {
+  display: flex;
+  align-items: center;
+}
+
+.bold {
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+i {
+  color: #0A2B22;
+}
+
+.input_style_button_pay {
+  color: #FFFDF6;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Raleway", helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #BD8E34;
+  width: 210px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0A2B22;
+  ;
+}
+
+.input_style_button_pay:hover {
+  transition: all 0.8s ease;
+  color: #FFFDF6;
+  background-color: #BD8E34;
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 #BD8E34;
+  border: 1px solid #BD8E34;
+}
+
+.midden {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+.flexTitle {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFDF6;
+  z-index: 5;
+}
+
+.header-elements {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.nav-mid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links {
+  font-family: "Cinzel", Helvetica, sans-serif;
+  color: #0A2B22;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 10px;
+  position: relative;
+}
+
+.links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #BD8E34;
+  transition: width 0.9s ease, left 0.9s ease;
+}
+
+.links:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.links:hover {
+  color: #BD8E34;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.bx {
+  color: #0A2B22;
+}
+
+/* FOOTER!!!!!!!!!!!!!!!!!!!!!*/
+footer {
+  width: auto;
+  padding: 50px;
+  background-color: #0A2B22;
+  color: #FFFDF6;
+}
+
+footer h2,
+footer h3,
+footer p {
+  color: #FFFDF6;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-top-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.footer-top-left h3 {
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.opening-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 15px;
+  font-family: "Raleway", Helvetica, sans-serif;
+  color: #FFFDF6;
+}
+
+.opening-hours>div:nth-child(odd) {
+  text-align: center;
+  font-weight: 500;
+}
+
+.opening-hours>div:nth-child(even) {
+  text-align: right;
+}
+
+.footer-top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  color: #FFFDF6;
+}
+
+address {
+  text-align: center;
+  font-style: normal;
+  line-height: 1.8;
+  color: #FFFDF6;
+}
+
+.footer-top-right a {
+  color: #FFFDF6;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials i {
+  color: #FFFDF6;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.footer-top-right .reservation-button {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #BD8E34;
+  color: #0A2B22;
+  background-color: #FFFDF6;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: box-shadow 0.8s ease;
+}
+
+.reservation-button:hover {
+  box-shadow: 0 0 8px 0 #BD8E34;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.footer-bottom a,
+.footer-bottom i {
+  text-decoration: none;
+  color: #FFFDF6;
+}
+
+.policies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-right: 2rem;
+}
+
+.policies a:hover {
+  text-decoration: underline;
+}
